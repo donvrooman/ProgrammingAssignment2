@@ -1,9 +1,11 @@
+## cachematrix.R
+##
 ## cachSolve(x, ...) returns the inverse of a square matrix using 
 ## functions defined in makeCacheMatrix(x) to cache its inverse and
 ## improve performance following the first call. 
 
 ## makeCacheMatrix('x') initializes two cached matrices and returns a list 
-## containing functions to set and get these cached values:
+## containing functions to set and get cached matrices:
 ##  1. set(m) sets cached matrix to 'm', and sets cached inverse matrix to NULL
 ##  2. get() gets cached matrix to be inverted
 ##  3. setinverse(i) sets cached inverse matrix to 'i'
@@ -35,7 +37,7 @@ cacheSolve <- function(x, ...) {
 
     i <- x$getinverse()
     if(!is.null(i)) {
-        message("getting cached data")
+##      message("getting cached data")
         return(i)
     }
     m <- x$get()
