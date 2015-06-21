@@ -4,10 +4,11 @@
 ## functions defined in makeCacheMatrix(x) to cache its inverse and
 ## improve performance following the first call. 
 
-## makeCacheMatrix('x') initializes two cached matrices and returns a list 
-## containing functions to set and get cached matrices:
+## makeCacheMatrix(x) sets cached matrix 'cachedm' to 'x' and initializes cached
+## matrix 'cachedi' to NULL; returns a list containing functions to set and
+## get cached matrices:
 ##  1. set(m) sets cached matrix to 'm', and sets cached inverse matrix to NULL
-##  2. get() gets cached matrix to be inverted
+##  2. get() gets cached matrix
 ##  3. setinverse(i) sets cached inverse matrix to 'i'
 ##  4. getinverse() gets cached inverse matrix
 
